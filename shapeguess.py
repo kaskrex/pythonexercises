@@ -1,6 +1,6 @@
 a = int(input("No. of sides?"))
 if a == 3:
-    b = input("How many equal sides?")
+    b = int(input("How many equal sides?"))
     if b == 0 or b == 1:
         print("Just a triangle")
     elif b == 2:
@@ -11,7 +11,7 @@ if a == 3:
         print("Invalid")
     
 elif a == 4:
-    b = input("How many parallel sides?")
+    b = int(input("How many parallel sides?"))
     if b == 2:
         print("Trapezium")
     elif b == 4:
