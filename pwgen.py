@@ -9,32 +9,49 @@
 #shuffle list
 #print(random.shuffle(test))
 
+# 1. User choose pw len
+# 3. Use for loop that loops for pwlen-1 (?) to push in characters randomly picked at each iteration
+# 4. Once a character has been picked, pop that character from original list 
+
 import itertools
 import string
 import random 
 import nltk
 
-foo = "aaasssc"
-
 #choose length of password
-#a = input(int("Enter number"))
+pwlen = int(input("Enter number"))
 
 #list of characters
-#x = []
 x = string.ascii_uppercase
 x = [x[i] for i in range(0, len(x), 1)]
-print(x)
 
-y = []
 y = string.ascii_lowercase 
 y = [y[i] for i in range(0, len(y), 1)]
-print(y)
 
 z = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-print(z)
 
+#List of all possible characters 
+fin = x + y + z
 
+#Empty list that'll contain final list
+pw = []
 
-#removes repeated characters
-#b = ''.join(ch for ch, _ in itertools.groupby(b))
-#print(b)
+for i in range(pwlen):
+
+    #choose character from list at random
+    chose = random.choice(fin)
+    
+    #locate position of chosen character from index
+    pos = fin.index(chose)
+    
+    #convert to type string
+    chosen = str(chose)
+    
+    #append chosen character to list
+    pw.append(chosen)
+    
+    #pop chosen character from list
+    fin.pop(pos)
+    
+strpw = ''.join(pw)
+print("Password is: ", strpw)
