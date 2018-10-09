@@ -13,10 +13,8 @@
 # 3. Use for loop that loops for pwlen-1 (?) to push in characters randomly picked at each iteration
 # 4. Once a character has been picked, pop that character from original list 
 
-import itertools
 import string
 import random 
-import nltk
 
 #choose length of password
 pwlen = int(input("Enter number"))
