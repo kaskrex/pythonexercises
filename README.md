@@ -1,1 +1,1 @@
-A basic set of python exercises just for fun & to learn python
+Python crash course that allows you to get comfy with python's syntax
